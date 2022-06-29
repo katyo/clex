@@ -1,0 +1,30 @@
+[package]
+name = "clex"
+version = "0.1.0"
+description = "Fast C-lang lexer (library)"
+license = "MIT"
+authors = ["K <kayo@illumium.org>"]
+readme = "README.md"
+categories = ["parser-implementations", "development-tools"]
+keywords = ["C", "lexer", "parser", "logos", "source"]
+homepage = "https://github.com/katyo/clex"
+repository = "https://github.com/katyo/clex"
+edition = "2021"
+
+[workspace]
+members = ["cli"]
+
+[dependencies.logos]
+version = "0.12"
+
+[dependencies.phf]
+version = "0.10"
+features = ["macros"]
+
+[dependencies.ethnum]
+version = "1"
+optional = true
+
+[features]
+default = ["ethnum"]
+llvm-intrinsics = ["ethnum/llvm-intrinsics"]
