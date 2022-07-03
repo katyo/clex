@@ -1,0 +1,31 @@
+[package]
+name = "clex-cli"
+version = "0.1.0"
+publish = false
+description = "Fast C-lang lexer (command-line)"
+license = "MIT"
+authors = ["K <kayo@illumium.org>"]
+readme = "README.md"
+categories = ["parser-implementations", "development-tools"]
+keywords = ["C", "lexer", "parser", "logos", "source"]
+homepage = "https://github.com/katyo/clex"
+repository = "https://github.com/katyo/clex"
+edition = "2021"
+
+[[bin]]
+name = "clex"
+path = "src/main.rs"
+
+[dependencies.clex]
+version = "0.1.0"
+path = ".."
+
+[dependencies.anyhow]
+version = "1"
+
+[dependencies.paw]
+version = "1"
+
+[dependencies.structopt]
+version = "0.3"
+features = ["paw"]
